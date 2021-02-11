@@ -24,7 +24,7 @@ SECRET_KEY = 'ko0%-&-it-%9v2arqbz%w!yg#(k=)_b0!-e(41@*8&^%)k3*+^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://skjournal.herokuapp.com/']
 
 # Application definition
 
