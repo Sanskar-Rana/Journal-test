@@ -18,6 +18,8 @@ from django.shortcuts import render
 from django.urls import path
 from account.views import loginUser, registerUser,logOut
 
+from django.views.static import serve
+from django.conf.urls import url
 
 def home(request):
     return render(request, 'home.html')
@@ -31,6 +33,8 @@ urlpatterns = [
     path('', loginUser),
     path('home', home),
     path('register', registerUser),
-    path('logout',logOut)
+    path('logout',logOut),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 
 ]
